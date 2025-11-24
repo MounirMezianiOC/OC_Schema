@@ -1,0 +1,130 @@
+.node-details-panel {
+    background: rgba(31, 35, 45, 0.95);
+    border: 1px solid #4A515C;
+    border-radius: 8px;
+    padding: 16px;
+    color: #E8EAED;
+    height: 100%;
+    overflow-y: auto;
+    backdrop-filter: blur(8px);
+}
+
+.details-header {
+    border-bottom: 1px solid #4A515C;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.details-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #FFFFFF;
+}
+
+.details-type {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3498DB;
+    background: rgba(52, 152, 219, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.details-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #95A5A6;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.stat-value.inflow {
+    color: #2ECC71;
+}
+
+.stat-value.outflow {
+    color: #E74C3C;
+}
+
+.details-section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #95A5A6;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 4px;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.prop-key {
+    color: #95A5A6;
+    font-weight: 500;
+}
+
+.prop-value {
+    color: #E8EAED;
+    word-break: break-word;
+}
+
+.details-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.action-btn {
+    flex: 1;
+    background: #2C3E50;
+    border: 1px solid #4A515C;
+    color: #E8EAED;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.action-btn:hover {
+    background: #34495E;
+}
+
+.action-btn.primary {
+    background: #3498DB;
+    border-color: #2980B9;
+    color: white;
+}
+
+.action-btn.primary:hover {
+    background: #2980B9;
+}

@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./database:/app/database
+      - ./backend:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python server.py
+    networks:
+      - ontology-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5177:5177"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8002/api
+    command: npm run dev -- --host
+    networks:
+      - ontology-net
+    depends_on:
+      - backend
+
+networks:
+  ontology-net:
+    driver: bridge
