@@ -1,12 +1,26 @@
 # APW Ontology - Capital Flow Master Dashboard
 
-A Foundry-style application for visualizing and managing capital flows across Jobs, Vendors, and the Central Company.
+A Foundry-style application for visualizing and managing capital flows across Jobs, Vendors, and the Central Company, featuring an immersive **3D Graph Visualization**.
+
+## 🌟 Key Feature: 3D Ontology Visualization
+
+Experience your data like never before with our interactive 3D Graph Engine:
+
+- **Immersive 3D Space**: Navigate through a universe of Vendors, Jobs, and Transactions in a fully interactive 3D environment.
+- **Force-Directed Layout**: Automatically organizes complex relationships into intuitive clusters, revealing hidden patterns in your capital flow.
+- **Interactive Exploration**: 
+  - **Rotate, Zoom, & Pan**: Inspect the ontology from any angle.
+  - **Node Highlighting**: Hover over nodes to instantly see connections and dependencies.
+  - **Click-to-Focus**: Select any node to center the view and drill down into specific details.
+- **Visual Analytics**: 
+  - Node sizes dynamically represent transaction volume.
+  - Color-coded connections indicate different types of relationships and flow status.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    User[User] --> Frontend[React + Vite App]
+    User[User] --> Frontend[React + Vite + Three.js]
     Frontend --> API[FastAPI Backend]
     API --> DB[(SQLite/Postgres)]
     
@@ -25,7 +39,7 @@ graph TD
 ## Project Structure
 
 - `backend/`: FastAPI server, database schema, and API logic.
-- `frontend/`: React + TypeScript application (Vite).
+- `frontend/`: React + TypeScript application (Vite) utilizing **Three.js** and **React Force Graph 3D**.
 - `database/`: SQLite database file.
 - `docs/`: Documentation and diagrams.
 
@@ -46,9 +60,9 @@ graph TD
 
 ## Features
 
-### M1: Proof of Concept
-- **Graph Visualization**: Interactive node-link diagram of vendors and jobs.
-- **Drill-down**: Click on edges to see exact invoice details.
+### M1: Proof of Concept & Visualization
+- **3D Graph Visualization**: Interactive, force-directed 3D node-link diagram.
+- **Drill-down**: Click on edges/nodes to see exact invoice details and history.
 - **Audit Trail**: Immutable logs of all data changes.
 
 ### M2: Robust Ingestion & Matching
